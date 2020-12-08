@@ -7,7 +7,7 @@ namespace ConsoleApp1._4_Behavioral_Patterns
 {
     internal static class Behavioral
     {
-        internal static void Behavioral_NullObject()
+        internal static void NullObject()
         {
             Console.WriteLine("Behavioral - Null Object Pattern Demo");
             Console.WriteLine("-------------------------------------");
@@ -27,8 +27,15 @@ namespace ConsoleApp1._4_Behavioral_Patterns
             {
                 Console.WriteLine($"La orden es {orderByProduct}");
             }
+
+            Console.WriteLine("");
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Null Object - Demo2");
+            NullObjectDemo2();
+
+
         }
-        internal static void Behavioral_NullObjectDemo2() 
+        private static void NullObjectDemo2() 
         {
             Console.WriteLine("Behavioral - Null Object Pattern Demo2");
             Console.WriteLine("--------------------------------------");

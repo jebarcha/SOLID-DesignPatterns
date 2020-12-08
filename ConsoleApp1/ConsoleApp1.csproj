@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <Folder Include="2_Creational_Patterns\" />
-    <Folder Include="3_Structural_Patterns\" />
     <Folder Include="1_SOLID\" />
   </ItemGroup>
 

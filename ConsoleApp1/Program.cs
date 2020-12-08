@@ -1,5 +1,6 @@
 ﻿using System;
 using ConsoleApp1._4_Behavioral_Patterns;
+using ConsoleApp1._3_Structural_Patterns;
 
 namespace ConsoleApp1
 {
@@ -7,10 +8,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //Behavioral.Behavioral_NullObject();
-            Behavioral.Behavioral_NullObjectDemo2();
-
+            PerformDemos();
             PauseAndWait();
+        }
+        private static void PerformDemos() 
+        {
+            #region Creational
+
+            #endregion
+
+            #region Behavioral
+            Behavioral.NullObject();
+
+            #endregion
+
+            #region Structural
+            //Structural.Facade();
+
+            #endregion
         }
         private static void PauseAndWait() 
         {
