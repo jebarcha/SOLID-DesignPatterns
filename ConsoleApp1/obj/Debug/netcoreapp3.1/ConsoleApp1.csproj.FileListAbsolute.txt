@@ -10,3 +10,4 @@ C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache
+C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csprojAssemblyReference.cache
