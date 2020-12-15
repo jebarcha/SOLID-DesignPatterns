@@ -6,8 +6,9 @@ C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.pdb
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfoInputs.cache
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfo.cs
-C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CoreCompileInputs.cache
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache
-C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csprojAssemblyReference.cache
+C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CopyComplete

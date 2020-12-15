@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NHRjOzyFIs2Qsl/rxHXa0rkPaYVF0OfBfBLtSG9IeSjr7uZg41KjWJG/ReTmjd3MPFLgwuHRHrtPD9GyEJInaw==",
+  "dgSpecHash": "sks8zJ2tWGCCzcW+5JgtQC6hroeE0ZYnqSmmKaCpI5gly0yvk2ejyOj7jAgrybINU/YV+3wvEYKJDhvjOMu6ow==",
   "success": true,
   "projectFilePath": "C:\\MisCursos\\DesignPatterns\\Udemy-RodrigoMorales\\DesignPatternsDemo\\ConsoleApp1\\ConsoleApp1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\J.Jesus\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

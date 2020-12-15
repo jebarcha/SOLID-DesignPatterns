@@ -19,14 +19,14 @@ namespace ConsoleApp1
 
             #region Behavioral
             //Behavioral.NullObject();
-
-            Behavioral.Visitor();
+            //Behavioral.Visitor();
 
 
             #endregion
 
             #region Structural
             //Structural.Facade();
+            Structural.Adapter();
 
             #endregion
         }

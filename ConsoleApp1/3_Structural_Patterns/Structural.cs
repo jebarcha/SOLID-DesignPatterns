@@ -1,8 +1,10 @@
-﻿using ConsoleApp1._3_Structural_Patterns.Facade;
+﻿using ConsoleApp1._3_Structural_Patterns.Adapter;
+using ConsoleApp1._3_Structural_Patterns.Facade;
 using ConsoleApp1._3_Structural_Patterns.Facade.Demo2;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static ConsoleApp1._3_Structural_Patterns.Adapter.Demo2.AdapterDemo2;
 
 namespace ConsoleApp1._3_Structural_Patterns
 {
@@ -50,5 +52,25 @@ namespace ConsoleApp1._3_Structural_Patterns
             music.CompleteRunning();
         }
 
+        internal static void Adapter() 
+        {
+            //Console.WriteLine(new JsonConverter().GetJson());
+
+            var xmlConverter = new XmlConverter();
+            var adapter = new XmlToJsonAdapter(xmlConverter);
+            adapter.ConvertXmlToJson();
+
+
+            Console.WriteLine("");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Demo 2:");
+            AdapterDemo2();
+        }
+        private static void AdapterDemo2() 
+        {
+            var EuropeanToUSAdapter = new EuropeanToUSAdapter(new EuropeanElectricalConnector());
+            var result = EuropeanToUSAdapter.ProvideElectricity();
+            Console.WriteLine(result);
+        }
     }
 }
