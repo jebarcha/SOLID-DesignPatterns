@@ -26,7 +26,10 @@ namespace ConsoleApp1
 
             #region Structural
             //Structural.Facade();
-            Structural.Adapter();
+            //Structural.Adapter();
+
+            Structural.Decorator();
+
 
             #endregion
         }

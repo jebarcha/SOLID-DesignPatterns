@@ -1,4 +1,6 @@
 ﻿using ConsoleApp1._3_Structural_Patterns.Adapter;
+using ConsoleApp1._3_Structural_Patterns.Decorator;
+using ConsoleApp1._3_Structural_Patterns.Decorator.Demo2;
 using ConsoleApp1._3_Structural_Patterns.Facade;
 using ConsoleApp1._3_Structural_Patterns.Facade.Demo2;
 using System;
@@ -71,6 +73,25 @@ namespace ConsoleApp1._3_Structural_Patterns
             var EuropeanToUSAdapter = new EuropeanToUSAdapter(new EuropeanElectricalConnector());
             var result = EuropeanToUSAdapter.ProvideElectricity();
             Console.WriteLine(result);
+        }
+
+        internal static void Decorator() 
+        {
+            var expressoWithMilkAndChocolate = new MilkDecorator(new ChocolateDecorator(new Expresso()));
+
+            Console.WriteLine($"The price of {expressoWithMilkAndChocolate.GetDescription()} is {expressoWithMilkAndChocolate.GetCost()}");
+
+
+            DecoratorDemo2();
+        }
+
+        private static void DecoratorDemo2() 
+        {
+            Console.WriteLine("");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Decorator - Demo 2:");
+            var x = new PremiumOrder(new SimpleOrder());
+            Console.WriteLine(x.GetCost());
         }
     }
 }
