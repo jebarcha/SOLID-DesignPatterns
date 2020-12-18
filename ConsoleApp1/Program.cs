@@ -20,6 +20,7 @@ namespace ConsoleApp1
             #region Behavioral
             //Behavioral.NullObject();
             //Behavioral.Visitor();
+            Behavioral.State();
 
 
             #endregion
@@ -27,8 +28,7 @@ namespace ConsoleApp1
             #region Structural
             //Structural.Facade();
             //Structural.Adapter();
-
-            Structural.Decorator();
+            //Structural.Decorator();
 
 
             #endregion
