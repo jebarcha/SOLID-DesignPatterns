@@ -12,7 +12,10 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+<<<<<<< HEAD
     <PackageReference Include="Stateless" Version="5.1.5" />
+=======
+>>>>>>> 0878961... State Pattern - Behavioral
     <PackageReference Include="System.Collections" Version="4.3.0" />
   </ItemGroup>
 
