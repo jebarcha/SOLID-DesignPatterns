@@ -15,7 +15,11 @@
 <<<<<<< HEAD
     <PackageReference Include="Stateless" Version="5.1.5" />
 =======
+<<<<<<< HEAD
 >>>>>>> 0878961... State Pattern - Behavioral
+=======
+>>>>>>> 0da3b8354c82bf67afbbcbd1151db6c2e56e3976
+>>>>>>> 0041774b659c0e6bca556f50f13cf543c96b1a89
     <PackageReference Include="System.Collections" Version="4.3.0" />
   </ItemGroup>
 
