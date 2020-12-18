@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "sks8zJ2tWGCCzcW+5JgtQC6hroeE0ZYnqSmmKaCpI5gly0yvk2ejyOj7jAgrybINU/YV+3wvEYKJDhvjOMu6ow==",
+  "dgSpecHash": "EJU16nL6olvTLXjMPJuq3QhbvkMQhBnqPd5+RvXt5YWjjfxAsy+SUDzK54O+Fj3mcLi9LGdLNeImwhxURUQr2A==",
   "success": true,
   "projectFilePath": "C:\\MisCursos\\DesignPatterns\\Udemy-RodrigoMorales\\DesignPatternsDemo\\ConsoleApp1\\ConsoleApp1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\J.Jesus\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\J.Jesus\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\J.Jesus\\.nuget\\packages\\stateless\\5.1.5\\stateless.5.1.5.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,8 +1,8 @@
 ﻿using ConsoleApp1._4_Behavioral_Patterns.NullOject;
+using ConsoleApp1._4_Behavioral_Patterns.State;
 using ConsoleApp1._4_Behavioral_Patterns.Visitor;
 using ConsoleApp1._4_Behavioral_Patterns.Visitor.Demo2;
 using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace ConsoleApp1._4_Behavioral_Patterns
@@ -86,5 +86,35 @@ namespace ConsoleApp1._4_Behavioral_Patterns
             Console.WriteLine(expression);
         }
 
+        internal static void State() 
+        {
+            Console.WriteLine("Behavioral - State Pattern Demo");
+            Console.WriteLine("-------------------------------------");
+
+            var state = CallState.Colagado;
+
+            while (true) 
+            {
+                Console.WriteLine($"The telephone is currently in {state}");
+                Console.WriteLine("Select an option");
+
+                for (var i = 0; i < PhoneCalls.Rules[state].Count; i++) 
+                {
+                    var (t, _) = PhoneCalls.Rules[state][i];
+                    Console.WriteLine($"{i}. {t}");
+                }
+
+                var userInput = Console.ReadLine();
+                if (String.IsNullOrEmpty(userInput)) 
+                { 
+                    return;
+                }
+
+                int input = int.Parse(userInput);
+
+                var (_, s) = PhoneCalls.Rules[state][input];
+                state = s;
+            }
+        }
     }
 }
