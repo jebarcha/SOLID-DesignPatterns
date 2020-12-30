@@ -1,9 +1,13 @@
 ﻿using ConsoleApp1._4_Behavioral_Patterns.NullOject;
 using ConsoleApp1._4_Behavioral_Patterns.State;
+using ConsoleApp1._4_Behavioral_Patterns.Strategy;
+using ConsoleApp1._4_Behavioral_Patterns.Strategy.Demo2;
 using ConsoleApp1._4_Behavioral_Patterns.Visitor;
 using ConsoleApp1._4_Behavioral_Patterns.Visitor.Demo2;
 using System;
 using System.Text;
+using Circle = ConsoleApp1._4_Behavioral_Patterns.Visitor.Circle;
+using Square = ConsoleApp1._4_Behavioral_Patterns.Visitor.Square;
 
 namespace ConsoleApp1._4_Behavioral_Patterns
 {
@@ -115,6 +119,36 @@ namespace ConsoleApp1._4_Behavioral_Patterns
                 var (_, s) = PhoneCalls.Rules[state][input];
                 state = s;
             }
+        }
+
+        internal static void Strategy() 
+        {
+            var list = new[] { "C#", "Java", "Angular", "React", "Javascript", "CSS", "HTML" };
+            //var tp = new TextProcessor();
+            //tp.SetOutputFormat(OutputFormat.NumberList);
+            var tp = new TextProcessor(OutputFormat.NumberList);
+            tp.AppendList(list);
+            Console.WriteLine(tp);
+            tp.Clear();
+
+            //tp.SetOutputFormat(OutputFormat.Html);
+            tp = new TextProcessor(OutputFormat.Html);
+            tp.AppendList(list);
+            Console.WriteLine(tp);
+            tp.Clear();
+
+            // Strategy Demo 2:-----------------------------
+            StrategyDemo2();
+        }
+        private static void StrategyDemo2() 
+        {
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Strategy pattern - demo 2");
+            var context = new Context(new Strategy.Demo2.Circle());
+            Console.WriteLine(context.Draw());
+
+            context = new Context(new Strategy.Demo2.Square());
+            Console.WriteLine(context.Draw());
         }
     }
 }

@@ -12,3 +12,5 @@ C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CopyComplete
 C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csprojAssemblyReference.cache
+C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\bin\Debug\netcoreapp3.1\Stateless.dll
+C:\MisCursos\DesignPatterns\Udemy-RodrigoMorales\DesignPatternsDemo\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CoreCompileInputs.cache

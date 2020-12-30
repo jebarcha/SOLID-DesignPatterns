@@ -20,8 +20,8 @@ namespace ConsoleApp1
             #region Behavioral
             //Behavioral.NullObject();
             //Behavioral.Visitor();
-            Behavioral.State();
-
+            //Behavioral.State();
+            Behavioral.Strategy();
 
             #endregion
 
