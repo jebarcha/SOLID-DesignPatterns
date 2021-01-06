@@ -1,6 +1,7 @@
 ﻿using System;
 using ConsoleApp1._4_Behavioral_Patterns;
 using ConsoleApp1._3_Structural_Patterns;
+using ConsoleApp1._2_Creational_Patterns;
 
 namespace ConsoleApp1
 {
@@ -14,6 +15,7 @@ namespace ConsoleApp1
         private static void PerformDemos() 
         {
             #region Creational
+            Creational.Builder();
 
             #endregion
 
@@ -21,7 +23,7 @@ namespace ConsoleApp1
             //Behavioral.NullObject();
             //Behavioral.Visitor();
             //Behavioral.State();
-            Behavioral.Strategy();
+            //Behavioral.Strategy();
 
             #endregion
 
