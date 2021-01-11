@@ -15,7 +15,8 @@ namespace ConsoleApp1
         private static void PerformDemos() 
         {
             #region Creational
-            Creational.Builder();
+            //Creational.Builder();
+            Creational.Singleton();
 
             #endregion
 

@@ -1,5 +1,6 @@
 ﻿using ConsoleApp1._2_Creational_Patterns.Builder;
 using ConsoleApp1._2_Creational_Patterns.FluentBuilder.Demo2;
+using ConsoleApp1._2_Creational_Patterns.Singleton;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -46,6 +47,16 @@ namespace ConsoleApp1._2_Creational_Patterns
             Console.WriteLine(car.ToString());
         }
 
+        internal static void Singleton() 
+        {
+            Console.WriteLine("Creational - Singleton Pattern Demo");
+            Console.WriteLine("-------------------------------------");
 
+            //var capitals = new SingletonDataContainer();
+            var capitals = SingletonDataContainer.Instance;
+            var capitals2 = SingletonDataContainer.Instance;
+            var capitals3 = SingletonDataContainer.Instance;
+            Console.WriteLine($"La cantidad de habitantes de Londres es: {capitals.GetPopulation("London")}");
+        }
     }
 }
