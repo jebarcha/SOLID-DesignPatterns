@@ -16,7 +16,9 @@ namespace ConsoleApp1
         {
             #region Creational
             //Creational.Builder();
-            Creational.Singleton();
+            //Creational.Singleton();
+            //Creational.Prototype_ICloneable_Demo();
+            Creational.Prototype_DeepCopy_Demo();
 
             #endregion
 
