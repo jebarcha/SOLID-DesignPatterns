@@ -1,8 +1,10 @@
 ﻿using ConsoleApp1._2_Creational_Patterns.Builder;
+using ConsoleApp1._2_Creational_Patterns.FactoryMethod;
 using ConsoleApp1._2_Creational_Patterns.FluentBuilder.Demo2;
 using ConsoleApp1._2_Creational_Patterns.Prototype.DeepCopy;
 //using ConsoleApp1._2_Creational_Patterns.ICloneable;
 using ConsoleApp1._2_Creational_Patterns.Singleton;
+using PizzaFactory;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -93,6 +95,41 @@ namespace ConsoleApp1._2_Creational_Patterns
 
 
         }
+        internal static void FactoryMethod() 
+        {
+            Console.WriteLine("Creational - Factory Method Pattern Demo");
+            Console.WriteLine("----------------------------------------");
 
+            //var user = new User("Jose", "jose@mail.com", "USA");
+            var user = User.Factory.CreateWithDefaultCountry("Jose", "jose@email.com");
+            Console.WriteLine($"Name:{user.Name}, Email:{user.Email}, Country:{user.Country}");
+
+            //---------------------------------------------------------------------------
+            Console.WriteLine("");
+            Console.WriteLine("--------------------------------------------------------");
+            Console.WriteLine("Creational - Factory Method Pattern Demo - Pizza Factory");
+            Console.WriteLine("--------------------------------------------------------");
+
+            PizzaStore nyStore = new NYPizzaStore();
+            Pizza pizza = nyStore.OrderPizza(TypeOfPizza.Pepperoni);
+            Console.WriteLine($"Pizza {pizza.Name} lista para ser entregada.");
+        }
+        internal static void AbstractFactory() 
+        {
+            Console.WriteLine("Creational - Abstract Factory Pattern Demo");
+            Console.WriteLine("----------------------------------------");
+
+            Console.Write("NY Pizza");
+            ConsoleApp1._2_Creational_Patterns.Abstract_Factory.PizzaStore nyStore = new ConsoleApp1._2_Creational_Patterns.Abstract_Factory.NYPizzaStore();
+            ConsoleApp1._2_Creational_Patterns.Abstract_Factory.Pizza pizza = nyStore.OrderPizza(ConsoleApp1._2_Creational_Patterns.Abstract_Factory.TypeOfPizza.Pepperoni);
+            Console.WriteLine($"Pizza {pizza.Name} lista para ser entregada.");
+            Console.WriteLine("----------------------------------------");
+            Console.Write("");
+            
+            Console.Write("FL Pizza");
+            ConsoleApp1._2_Creational_Patterns.Abstract_Factory.PizzaStore flStore = new ConsoleApp1._2_Creational_Patterns.Abstract_Factory.FLPizzaStore();
+            ConsoleApp1._2_Creational_Patterns.Abstract_Factory.Pizza flPizza = flStore.OrderPizza(ConsoleApp1._2_Creational_Patterns.Abstract_Factory.TypeOfPizza.California);
+            Console.WriteLine($"Pizza {flPizza.Name} lista para ser entregada.");
+        }
     }
 }
