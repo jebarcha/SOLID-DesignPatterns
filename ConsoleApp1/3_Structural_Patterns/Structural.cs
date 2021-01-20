@@ -1,4 +1,6 @@
 ﻿using ConsoleApp1._3_Structural_Patterns.Adapter;
+using ConsoleApp1._3_Structural_Patterns.Bridge;
+using ConsoleApp1._3_Structural_Patterns.Bridge.Demo2;
 using ConsoleApp1._3_Structural_Patterns.Decorator;
 using ConsoleApp1._3_Structural_Patterns.Decorator.Demo2;
 using ConsoleApp1._3_Structural_Patterns.Facade;
@@ -81,7 +83,6 @@ namespace ConsoleApp1._3_Structural_Patterns
 
             Console.WriteLine($"The price of {expressoWithMilkAndChocolate.GetDescription()} is {expressoWithMilkAndChocolate.GetCost()}");
 
-
             DecoratorDemo2();
         }
 
@@ -92,6 +93,35 @@ namespace ConsoleApp1._3_Structural_Patterns
             Console.WriteLine("Decorator - Demo 2:");
             var x = new PremiumOrder(new SimpleOrder());
             Console.WriteLine(x.GetCost());
+        }
+
+        internal static void Bridge() 
+        {
+            Console.WriteLine("Bridge Pattern Demo");
+            Console.WriteLine("----------------------------");
+
+            ReaderApp appWindows7 = new Windows7(new NormalDisplay()) { Text = "This is a demo of Bridge"};
+            appWindows7.Display();
+            ReaderApp appWindows10 = new Windows10(new NormalDisplay()) { Text = "This is a demo of Bridge" };
+            appWindows10.Display();
+
+            Console.WriteLine("");
+
+            ReaderApp appWindows7Reverse = new Windows7(new ReverseDisplay()) { Text = "This is a demo of Bridge" };
+            appWindows7Reverse.Display();
+            ReaderApp appWindows10Reverse = new Windows10(new ReverseDisplay()) { Text = "This is a demo of Bridge" };
+            appWindows10Reverse.Display();
+
+            Console.WriteLine(""); Console.WriteLine("");
+            Console.WriteLine("Bridge Pattern Demo 2");
+            Console.WriteLine("----------------------------");
+
+            Employee developer = new Developer(new Email());
+            Console.WriteLine(developer.ToString());
+
+            Employee scrumMaster = new ScrumMaster(new PhoneCall());
+            Console.WriteLine(scrumMaster.ToString());
+
         }
     }
 }

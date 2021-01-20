@@ -20,7 +20,7 @@ namespace ConsoleApp1
             //Creational.Prototype_ICloneable_Demo();
             //Creational.Prototype_DeepCopy_Demo();
             //Creational.FactoryMethod();
-            Creational.AbstractFactory();
+            //Creational.AbstractFactory();
 
             #endregion
 
@@ -36,6 +36,7 @@ namespace ConsoleApp1
             //Structural.Facade();
             //Structural.Adapter();
             //Structural.Decorator();
+            Structural.Bridge();
 
 
             #endregion
