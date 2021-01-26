@@ -1,6 +1,7 @@
 ﻿using ConsoleApp1._3_Structural_Patterns.Adapter;
 using ConsoleApp1._3_Structural_Patterns.Bridge;
 using ConsoleApp1._3_Structural_Patterns.Bridge.Demo2;
+using ConsoleApp1._3_Structural_Patterns.Composite;
 using ConsoleApp1._3_Structural_Patterns.Decorator;
 using ConsoleApp1._3_Structural_Patterns.Decorator.Demo2;
 using ConsoleApp1._3_Structural_Patterns.Facade;
@@ -121,6 +122,32 @@ namespace ConsoleApp1._3_Structural_Patterns
 
             Employee scrumMaster = new ScrumMaster(new PhoneCall());
             Console.WriteLine(scrumMaster.ToString());
+
+        }
+        internal static void Composite() 
+        {
+            Console.WriteLine("Composite Pattern Demo");
+            Console.WriteLine("----------------------------");
+
+            Composite.Product ram = new Composite.SimpleProduct("RAM 16 gb", 1000);
+            Composite.Product processor = new Composite.SimpleProduct("Intel Core i7", 2000);
+            Composite.Product videoCard = new Composite.SimpleProduct("nVideo gtx 1050", 500);
+            Composite.Product keyboard = new Composite.SimpleProduct("Perfo X keyb", 1000);
+            Composite.Product mouse = new Composite.SimpleProduct("Dell x", 100);
+            Composite.Product rig = new Composite.SimpleProduct("Tower hp", 2500);
+            Composite.Product led = new Composite.SimpleProduct("Led lg", 4000);
+
+            Composite.Product gamingKit = new CompositeProduct("Basic Gamer Computer");
+            gamingKit.Add(ram);
+            gamingKit.Add(processor);
+            gamingKit.Add(videoCard);
+            gamingKit.Add(keyboard);
+            gamingKit.Add(mouse);
+            gamingKit.Add(rig);
+            gamingKit.Add(led);
+
+            Console.WriteLine(gamingKit.GetPrice());
+
 
         }
     }
