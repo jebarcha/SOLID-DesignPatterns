@@ -37,7 +37,8 @@ namespace ConsoleApp1
             //Structural.Adapter();
             //Structural.Decorator();
             //Structural.Bridge();
-            Structural.Composite();
+            //Structural.Composite();
+            Structural.FlyWeight();
 
 
             #endregion

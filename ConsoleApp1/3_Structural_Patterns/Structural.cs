@@ -6,6 +6,7 @@ using ConsoleApp1._3_Structural_Patterns.Decorator;
 using ConsoleApp1._3_Structural_Patterns.Decorator.Demo2;
 using ConsoleApp1._3_Structural_Patterns.Facade;
 using ConsoleApp1._3_Structural_Patterns.Facade.Demo2;
+using ConsoleApp1._3_Structural_Patterns.FlyWeigth;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -150,5 +151,22 @@ namespace ConsoleApp1._3_Structural_Patterns
 
 
         }
+        internal static void FlyWeight()
+        {
+            Console.WriteLine("FlyWeight Pattern Demo");
+            Console.WriteLine("----------------------------");
+
+            var factory = new FlyWeigth.Factory();
+
+            for (int i = 0; i < 10; i++) 
+            {
+                IPlayer p = factory.GetPlayer(StaticDemo.GetPlayerRandom());
+                p.AssignWeapon(StaticDemo.GetWeaponRandom());
+                p.Mission();
+            }
+
+            Console.WriteLine(factory.GetNumberOfInstances());
+        }
+
     }
 }
