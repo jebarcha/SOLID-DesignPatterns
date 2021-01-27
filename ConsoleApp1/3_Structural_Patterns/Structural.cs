@@ -7,6 +7,7 @@ using ConsoleApp1._3_Structural_Patterns.Decorator.Demo2;
 using ConsoleApp1._3_Structural_Patterns.Facade;
 using ConsoleApp1._3_Structural_Patterns.Facade.Demo2;
 using ConsoleApp1._3_Structural_Patterns.FlyWeigth;
+using ConsoleApp1._3_Structural_Patterns.Proxy;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -49,7 +50,7 @@ namespace ConsoleApp1._3_Structural_Patterns
             Console.WriteLine("Demo 2:");
             Facade_Demo2();
         }
-        private static void Facade_Demo2() 
+        private static void Facade_Demo2()
         {
             RunningApp music = new RunningApp();
             Console.WriteLine("Start running - TurnOn Music");
@@ -58,7 +59,7 @@ namespace ConsoleApp1._3_Structural_Patterns
             music.CompleteRunning();
         }
 
-        internal static void Adapter() 
+        internal static void Adapter()
         {
             //Console.WriteLine(new JsonConverter().GetJson());
 
@@ -72,14 +73,14 @@ namespace ConsoleApp1._3_Structural_Patterns
             Console.WriteLine("Demo 2:");
             AdapterDemo2();
         }
-        private static void AdapterDemo2() 
+        private static void AdapterDemo2()
         {
             var EuropeanToUSAdapter = new EuropeanToUSAdapter(new EuropeanElectricalConnector());
             var result = EuropeanToUSAdapter.ProvideElectricity();
             Console.WriteLine(result);
         }
 
-        internal static void Decorator() 
+        internal static void Decorator()
         {
             var expressoWithMilkAndChocolate = new MilkDecorator(new ChocolateDecorator(new Expresso()));
 
@@ -88,7 +89,7 @@ namespace ConsoleApp1._3_Structural_Patterns
             DecoratorDemo2();
         }
 
-        private static void DecoratorDemo2() 
+        private static void DecoratorDemo2()
         {
             Console.WriteLine("");
             Console.WriteLine("----------------------------");
@@ -97,12 +98,12 @@ namespace ConsoleApp1._3_Structural_Patterns
             Console.WriteLine(x.GetCost());
         }
 
-        internal static void Bridge() 
+        internal static void Bridge()
         {
             Console.WriteLine("Bridge Pattern Demo");
             Console.WriteLine("----------------------------");
 
-            ReaderApp appWindows7 = new Windows7(new NormalDisplay()) { Text = "This is a demo of Bridge"};
+            ReaderApp appWindows7 = new Windows7(new NormalDisplay()) { Text = "This is a demo of Bridge" };
             appWindows7.Display();
             ReaderApp appWindows10 = new Windows10(new NormalDisplay()) { Text = "This is a demo of Bridge" };
             appWindows10.Display();
@@ -125,7 +126,7 @@ namespace ConsoleApp1._3_Structural_Patterns
             Console.WriteLine(scrumMaster.ToString());
 
         }
-        internal static void Composite() 
+        internal static void Composite()
         {
             Console.WriteLine("Composite Pattern Demo");
             Console.WriteLine("----------------------------");
@@ -158,7 +159,7 @@ namespace ConsoleApp1._3_Structural_Patterns
 
             var factory = new FlyWeigth.Factory();
 
-            for (int i = 0; i < 10; i++) 
+            for (int i = 0; i < 10; i++)
             {
                 IPlayer p = factory.GetPlayer(StaticDemo.GetPlayerRandom());
                 p.AssignWeapon(StaticDemo.GetWeaponRandom());
@@ -168,5 +169,22 @@ namespace ConsoleApp1._3_Structural_Patterns
             Console.WriteLine(factory.GetNumberOfInstances());
         }
 
+        internal static void Proxy()
+        {
+            Console.WriteLine("Proxy Pattern Demo");
+            Console.WriteLine("----------------------------");
+
+            ICar car = new CarProxy(new Driver(17, true));
+            car.Drive();
+
+            Console.WriteLine("");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Proxy Pattern Demo 2");
+            Console.WriteLine("----------------------------");
+            var person = new ProxyPerson(new Person(0));
+            Console.WriteLine(person.Eat());
+
+        }
     }
+
 }
