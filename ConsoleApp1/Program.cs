@@ -29,6 +29,7 @@ namespace ConsoleApp1
             //Behavioral.Visitor();
             //Behavioral.State();
             //Behavioral.Strategy();
+            Behavioral.ChainOfResponsibility();
 
             #endregion
 
@@ -39,7 +40,7 @@ namespace ConsoleApp1
             //Structural.Bridge();
             //Structural.Composite();
             //Structural.FlyWeight();
-            Structural.Proxy();
+            //Structural.Proxy();
 
 
             #endregion

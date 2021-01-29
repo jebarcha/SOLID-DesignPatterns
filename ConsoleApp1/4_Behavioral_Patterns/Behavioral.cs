@@ -1,10 +1,13 @@
-﻿using ConsoleApp1._4_Behavioral_Patterns.NullOject;
+﻿using ConsoleApp1._4_Behavioral_Patterns.ChainOfResponsibility;
+using ConsoleApp1._4_Behavioral_Patterns.ChainOfResponsibility.Demo2;
+using ConsoleApp1._4_Behavioral_Patterns.NullOject;
 using ConsoleApp1._4_Behavioral_Patterns.State;
 using ConsoleApp1._4_Behavioral_Patterns.Strategy;
 using ConsoleApp1._4_Behavioral_Patterns.Strategy.Demo2;
 using ConsoleApp1._4_Behavioral_Patterns.Visitor;
 using ConsoleApp1._4_Behavioral_Patterns.Visitor.Demo2;
 using System;
+using System.Collections.Generic;
 using System.Text;
 using Circle = ConsoleApp1._4_Behavioral_Patterns.Visitor.Circle;
 using Square = ConsoleApp1._4_Behavioral_Patterns.Visitor.Square;
@@ -149,6 +152,51 @@ namespace ConsoleApp1._4_Behavioral_Patterns
 
             context = new Context(new Strategy.Demo2.Square());
             Console.WriteLine(context.Draw());
+        }
+        internal static void ChainOfResponsibility()
+        {
+            Console.WriteLine("Chain of responsibility pattern demo");
+            Console.WriteLine("------------------------------------");
+
+            var iphone = new Mobile(MobileType.Premium, 900, "IPhone");
+            var xiaomy = new Mobile(MobileType.Basic, 300, "Xiaomy");
+            var samsung = new Mobile(MobileType.Medium, 600, "Samsung");
+
+            var mobiles = new List<Mobile>();
+            mobiles.Add(iphone);
+            mobiles.Add(xiaomy);
+            mobiles.Add(samsung);
+
+            var employee = new Employee(new MobileBasicMedium());
+            var supervisor = new Supervisor(new MobileMedium());
+            var ceo = new CEO(new MobilePremium());
+
+            employee.SetSucesor(supervisor);
+            supervisor.SetSucesor(ceo);
+
+            mobiles.ForEach(m => employee.HandleRequest(m));
+
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("Chain of responsibility pattern demo 2");
+            Console.WriteLine("------------------------------------");
+
+            var doc1 = new Document("doc1", "This is a document of more than ten characters");
+            var doc2 = new Document("doc2", "This is a document of more than ten characters");
+            var doc3 = new Document("doc3", "< 10");
+
+            var docs = new List<Document>();
+            docs.Add(doc1);
+            docs.Add(doc2);
+            docs.Add(doc3);
+
+            var editor = new Editor();
+            var executive = new Executive();
+
+            editor.SetSuccessor(executive);
+
+            docs.ForEach(m => Console.WriteLine(editor.HandleRequest(m)));
+
         }
     }
 }
