@@ -29,7 +29,8 @@ namespace ConsoleApp1
             //Behavioral.Visitor();
             //Behavioral.State();
             //Behavioral.Strategy();
-            Behavioral.ChainOfResponsibility();
+            //Behavioral.ChainOfResponsibility();
+            Behavioral.Command();
 
             #endregion
 

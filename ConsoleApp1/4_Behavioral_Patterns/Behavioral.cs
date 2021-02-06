@@ -1,5 +1,7 @@
 ﻿using ConsoleApp1._4_Behavioral_Patterns.ChainOfResponsibility;
 using ConsoleApp1._4_Behavioral_Patterns.ChainOfResponsibility.Demo2;
+using ConsoleApp1._4_Behavioral_Patterns.Command;
+using ConsoleApp1._4_Behavioral_Patterns.Command.Demo2;
 using ConsoleApp1._4_Behavioral_Patterns.NullOject;
 using ConsoleApp1._4_Behavioral_Patterns.State;
 using ConsoleApp1._4_Behavioral_Patterns.Strategy;
@@ -197,6 +199,61 @@ namespace ConsoleApp1._4_Behavioral_Patterns
 
             docs.ForEach(m => Console.WriteLine(editor.HandleRequest(m)));
 
+        }
+
+        internal static void Command()
+        {
+            Console.WriteLine("Command pattern demo");
+            Console.WriteLine("------------------------------------");
+
+            var modifyPrice = new ModifyPrice();
+            var product = new Product("IPhone", 25000);
+
+            var productCommand = new ProductCommand(product, PriceAction.Increase, 1000);
+            modifyPrice.SetCommand(productCommand);
+            modifyPrice.Invoke();
+            Console.WriteLine(product);
+
+            var productCommand2 = new ProductCommand(product, PriceAction.Decrease, 500);
+            modifyPrice.SetCommand(productCommand2);
+            modifyPrice.Invoke();
+
+            Console.WriteLine(product);
+            modifyPrice.Undo();
+            Console.WriteLine(product);
+
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("Command pattern demo 2");
+            Console.WriteLine("------------------------------------");
+
+            var bank = new BankAccount();
+            var cmd = new BankCommand();
+
+            bank.Balance = 90000;
+            Console.WriteLine($"Balance: {bank.Balance}");
+
+            cmd.Amount = 1000;
+            Console.WriteLine($"Deposit: {cmd.Amount}");
+            cmd.BalanceAction = _4_Behavioral_Patterns.Command.Demo2.Action.Deposit;
+            bank.Execute(cmd);
+
+            cmd.Amount = 2000;
+            Console.WriteLine($"Deposit: {cmd.Amount}");
+            cmd.BalanceAction = _4_Behavioral_Patterns.Command.Demo2.Action.Deposit;
+            bank.Execute(cmd);
+
+            cmd.Amount = 8000;
+            Console.WriteLine($"Withdraw: {cmd.Amount}");
+            cmd.BalanceAction = _4_Behavioral_Patterns.Command.Demo2.Action.Withdraw;
+            bank.Execute(cmd);
+
+            cmd.Amount = 100000;
+            Console.WriteLine($"Withdraw: {cmd.Amount}");
+            cmd.BalanceAction = _4_Behavioral_Patterns.Command.Demo2.Action.Withdraw;
+            bank.Execute(cmd);
+
+            Console.WriteLine($"Balance: {bank.Balance}");
         }
     }
 }
